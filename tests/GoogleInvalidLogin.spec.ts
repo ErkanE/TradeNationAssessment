@@ -66,7 +66,9 @@ test.describe('Trade Nation Homepage', () => {
         //waiting a random time between 5 and 12 seconds to attempt to simulate human behaviour
         await googlelogin.page.waitForTimeout(Math.floor(Math.random() * (12000 - 5000) + 5000));
 
-        await googlelogin.googleUsername.fill('InvalidUsername@gmail.com'); 
+        //await googlelogin.googleUsername.fill('InvalidUsername@gmail.com'); 
+
+        await googlelogin.googleUsername.pressSequentially('InvalidUsername@gmail.com'); 
         
         await googlelogin.page.waitForTimeout(Math.floor(Math.random() * (4000 - 1500) + 1500));
         
@@ -74,7 +76,9 @@ test.describe('Trade Nation Homepage', () => {
 
         await googlelogin.page.waitForTimeout(Math.floor(Math.random() * (3500 - 1000) + 1000));
 
-        await googlelogin.googlePassword.fill('InvalidPassword123!'); 
+        //await googlelogin.googlePassword.fill('InvalidPassword123!'); 
+        
+        await googlelogin.googleUsername.pressSequentially('InvalidUsername@gmail.com'); 
 
         await googlelogin.page.waitForTimeout(Math.floor(Math.random() * (4000 - 1500) + 1500));
 
